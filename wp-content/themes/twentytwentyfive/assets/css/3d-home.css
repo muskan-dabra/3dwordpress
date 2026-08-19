@@ -1,0 +1,56 @@
+/* 3D home page styles */
+
+.hero-3d {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 6rem 4rem;
+	background: linear-gradient(135deg,#0f172a 0%, #0b1220 60%);
+	color: #fff;
+	min-height: 70vh;
+	position: relative;
+	overflow: hidden;
+}
+
+.hero-inner { max-width: 48%; }
+.hero-title { font-size: 2.6rem; margin: 0 0 1rem; }
+.hero-sub { font-size: 1.1rem; opacity: .9; }
+.hero-cta { display:inline-block; margin-top:1.5rem; background:#06b6d4; color:#002; padding:0.8rem 1.2rem; border-radius:8px; text-decoration:none; font-weight:700; }
+
+.hero-canvas { width: 40%; display:flex; align-items:center; justify-content:center; perspective: 1200px; }
+.floating-card { width: 300px; height:200px; background: linear-gradient(135deg,#fff 0%, #e6f4ff 100%); color:#012; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:1.4rem; border-radius:16px; box-shadow: 0 30px 60px rgba(2,6,23,.6); transform-style: preserve-3d; transition: transform 300ms ease; }
+
+.about-3d, .services-3d, .testimonials-3d { padding: 4rem 2rem; }
+.container { max-width:1100px; margin:0 auto; }
+.cards { display:flex; gap:1rem; }
+.card { background:#fff; color:#062; padding:2rem; border-radius:12px; flex:1; transform: translateZ(0); box-shadow:0 10px 30px rgba(2,6,23,.08); }
+
+.site-footer-3d { background:#071126; color:#cfeefc; padding:3rem 2rem; }
+.site-footer-3d .footer-inner { max-width:1100px; margin:0 auto; display:flex; justify-content:space-between; gap:2rem; }
+.site-footer-3d .btn { background:#06b6d4; padding:.6rem 1rem; color:#002; border-radius:6px; text-decoration:none; }
+
+/* Responsive */
+@media (max-width:900px) {
+	.hero-3d { flex-direction:column; padding:3rem 1.5rem; }
+	.hero-inner, .hero-canvas { max-width:100%; width:100%; }
+	.cards { flex-direction:column; }
+}
+
+/* 3D banner section */
+.banner-3d { padding: 3rem 2rem; background: linear-gradient(180deg,#071126 0%, #081428 60%); color: #e6f9ff; }
+.banner-inner { display:flex; gap:2rem; align-items:center; justify-content:space-between; max-width:1100px; margin:0 auto; }
+.banner-content { max-width:48%; }
+.banner-content h2 { font-size:2rem; margin:0 0 .6rem; }
+.banner-content p { opacity:.9; }
+.banner-scene { width:46%; height:260px; position:relative; perspective:1000px; border-radius:16px; overflow:visible; }
+.banner-scene .layer { position:absolute; inset:0; border-radius:16px; transform-style:preserve-3d; transition: transform 250ms ease, box-shadow 250ms ease; }
+.banner-scene .layer:nth-child(1) { background: radial-gradient(circle at 20% 20%, rgba(6,182,212,.15), transparent 30%), linear-gradient(135deg,#042033 0%, #073047 100%); transform: translateZ(-40px) scale(1.06); }
+.banner-scene .layer:nth-child(2) { background: linear-gradient(135deg, rgba(255,255,255,.05), rgba(6,182,212,.04)); transform: translateZ(-20px) scale(1.04); box-shadow: inset 0 8px 40px rgba(0,0,0,.25); }
+.banner-scene .layer:nth-child(3) { background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(0,0,0,0)); transform: translateZ(-8px) scale(1.02); }
+.banner-scene .layer.foreground { display:flex; align-items:center; justify-content:center; font-size:2.4rem; font-weight:800; color:#06293a; background: linear-gradient(135deg,#dff8ff, #fff); transform: translateZ(10px); box-shadow: 0 30px 60px rgba(2,6,23,.4); }
+
+@media (max-width:900px) {
+    .banner-inner { flex-direction:column-reverse; }
+    .banner-scene { width:100%; height:220px; margin-bottom:1rem; }
+    .banner-content { max-width:100%; text-align:center; }
+}
