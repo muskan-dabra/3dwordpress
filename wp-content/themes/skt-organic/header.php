@@ -69,6 +69,7 @@ $postthumb = get_theme_mod('inner_post_banner_thumb');
                 </div>
 				
                 
+                
                 <div class="skt-header-quote-btn">
                         <div class="header-cart">
                             <a class="cart-customlocation cartcounter" href="" title="<?php esc_attr_e('View your shopping cart', 'skt-organic'); ?>">
